@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../img/favicon-32.png">
+<title>BROWN CRAB 백오피스</title>
+<!--
+  BROWN CRAB 백오피스 입구: 게임마다 백오피스가 따로 있어요 (게임마다 Firebase 프로젝트가 따로라 관리자 구글 계정도 따로).
+  버튼을 누르면 그 게임의 백오피스로 가고, 거기서 그 게임의 관리자 구글 계정으로 로그인해요 (한 번 로그인하면 그 브라우저가 기억해요).
+  주소를 바꾸면 아래 GAMES 만 고치기. 이 쪽은 아무것도 읽거나 쓰지 않아요 (데이터 보호는 각 프로젝트의 Firestore 규칙).
+-->
+<style>
+  :root { --brown: #7A4A2A; --line: #EADBCB; --bg: #FBF6F0; }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; background: var(--bg); color: #3A2A1E; font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif; display: flex; flex-direction: column; align-items: center; padding: 32px 16px; }
+  header { text-align: center; margin-bottom: 22px; }
+  header img { width: 180px; max-width: 60vw; }
+  h1 { font-size: 22px; margin: 10px 0 4px; color: var(--brown); }
+  header p { margin: 0; font-size: 14px; color: #8A6E58; line-height: 1.6; }
+  .list { width: 100%; max-width: 520px; display: flex; flex-direction: column; gap: 14px; }
+  a.game { display: flex; align-items: center; gap: 16px; padding: 16px 18px; background: #fff; border: 2px solid var(--line); border-radius: 20px; text-decoration: none; color: inherit; box-shadow: 0 4px 0 var(--line); transition: transform 80ms; }
+  a.game:hover { border-color: #D9B896; }
+  a.game:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--line); }
+  a.game img { width: 64px; height: 64px; border-radius: 16px; flex: none; }
+  a.game b { display: block; font-size: 20px; }
+  a.game small { display: block; margin-top: 3px; font-size: 13px; color: #8A6E58; line-height: 1.5; }
+  a.game i { margin-left: auto; font-style: normal; font-size: 26px; color: #C4A994; }
+  footer { margin-top: 26px; font-size: 12px; color: #A89080; text-align: center; line-height: 1.6; }
+</style>
+</head>
+<body>
+<header>
+  <img src="../img/logo.webp" alt="BROWN CRAB">
+  <h1>백오피스</h1>
+  <p>관리할 게임을 고르세요.<br>게임마다 따로 된 관리자 구글 계정으로 로그인해요.</p>
+</header>
+<div class="list" id="list"></div>
+<footer>각 백오피스는 관리자로 등록된 구글 계정만 열 수 있어요.<br>로그인은 게임마다 한 번씩 하면 그 브라우저가 기억해요.</footer>
+<script>
+  const GAMES = [
+    { name: '다운힐 러너', icon: 'downhill.png', url: 'https://downhill.brown-crab.com/admin/', note: 'BROWN CRAB · Firebase brown-crab-downhill' },
+    { name: '두더지 게임', icon: 'mole.png', url: 'https://sangbiny-creater.github.io/twin-gameland/mole-admin/', note: 'BROWN CRAB · 두더지 전용 Firebase' },
+    { name: '트윈 게임랜드', icon: 'twin.png', url: 'https://sangbiny-creater.github.io/twin-gameland/admin/', note: '은유와 은결 · Firebase twin-gameland' },
+  ];
+  document.getElementById('list').innerHTML = GAMES.map((g) => `<a class="game" href="${g.url}"><img src="${g.icon}" alt=""><span><b>${g.name}</b><small>${g.note}</small></span><i>›</i></a>`).join('');
+</script>
+</body>
+</html>
