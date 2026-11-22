@@ -23,3 +23,40 @@ h2{font-size:18px;margin:26px 0 4px}
 .upd{color:var(--sub);font-size:14px}
 footer{color:var(--sub);font-size:14px;border-top:1px solid var(--line);margin-top:40px;padding-top:16px;padding-bottom:40px}
 @media (max-width:520px){.game{flex-direction:column;text-align:center}.game img{width:200px}header img{height:44px}nav a{margin-left:10px;font-size:14px}}
+.hero .lead{font-size:20px;font-weight:800;color:var(--ink);margin-top:14px}
+.cta{display:inline-block;margin-top:18px;padding:12px 22px;border-radius:999px;background:var(--accent);color:#fff;font-weight:800;text-decoration:none;box-shadow:0 3px 0 #A94B12}
+.cta:hover{filter:brightness(1.05)}
+.h{margin-top:0}
+.sub{color:var(--sub);font-size:14px}
+.en{margin-top:6px!important;font-size:14px}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:10px}
+.pillars b{font-size:16px}
+.pillars p{margin:4px 0 0;color:var(--sub);font-size:15px}
+.game{padding:16px 0;border-top:1px solid var(--line)}
+.game:first-of-type{border-top:0}
+.game.big{align-items:flex-start}
+.game.big img{width:260px}
+.game p+p{margin-top:8px}
+.feat{margin:10px 0;padding-left:18px;color:var(--sub);font-size:15px}
+.feat li{margin:3px 0}
+.tag.live{background:#2E8A5E}
+.ph{width:150px;height:110px;flex:none;border-radius:14px;background:#FCEFE3;display:grid;place-items:center;font-size:52px}
+.eras{margin:12px 0;padding-left:22px}
+.eras li{margin:10px 0}
+.eras b{display:block;font-size:16px}
+.eras span{color:var(--sub);font-size:15px}
+.steps{padding-left:20px;color:var(--sub)}
+.steps li{margin:8px 0}
+.steps b{color:var(--ink)}
+details{border-top:1px solid var(--line);padding:10px 0}
+details:first-of-type{border-top:0}
+summary{cursor:pointer;font-weight:700}
+details p{margin:6px 0 0;color:var(--sub)}
+@media (max-width:620px){.pillars{grid-template-columns:1fr}.game.big img{width:100%}.ph{width:200px}nav a{margin-left:8px;font-size:13px}header{flex-wrap:wrap}}
+.cta.sm{margin-top:4px;padding:8px 16px;font-size:15px}
+@media (max-width:520px){.game.big{text-align:left;align-items:stretch}.game.big h3{text-align:center}.game.big .en{text-align:left}}
+/* 타임어택 한국사 카드: 그림·글 위아래 가운데, 버튼은 카드 가로 가운데 */
+.takh .game.big{align-items:center;padding-bottom:0}
+.takh .play-row{text-align:center;margin-top:16px}
+.takh .play-row .cta{margin-top:0}
+.takh .h .tag{vertical-align:3px}
