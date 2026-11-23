@@ -43,6 +43,7 @@
     { name: '다운힐 러너', icon: 'downhill.png', url: 'https://downhill.brown-crab.com/admin/', note: 'BROWN CRAB · Firebase brown-crab-downhill' },
     { name: '두더지 게임', icon: 'mole.png', url: 'https://sangbiny-creater.github.io/twin-gameland/mole-admin/', note: 'BROWN CRAB · 두더지 전용 Firebase' },
     { name: '타임어택-한국사', icon: 'takh.png', url: 'https://takh.brown-crab.com/admin/', note: 'BROWN CRAB · 문항·정답률 관리 · Firebase brown-crab-takh' },
+    { name: '타임어택-연산', icon: 'tac.png', url: 'https://tac.brown-crab.com/admin/', note: 'BROWN CRAB · 연산 정답률·랭킹 관리 · 관리자 명단 따로' },
     { name: '트윈 게임랜드', icon: 'twin.png', url: 'https://sangbiny-creater.github.io/twin-gameland/admin/', note: '은유와 은결 · Firebase twin-gameland' },
   ];
   document.getElementById('list').innerHTML = GAMES.map((g) => `<a class="game" href="${g.url}"><img src="${g.icon}" alt=""><span><b>${g.name}</b><small>${g.note}</small></span><i>›</i></a>`).join('');
